@@ -22,6 +22,13 @@ when 'freebsd'
     action :create
   end
 
+  directory '/usr/local/etc/rc.d/' do
+    owner 'root'
+    group 'wheel'
+    mode '0644'
+    action :create
+  end
+
   template '/usr/local/etc/rc.d/chef-client' do
     owner 'root'
     group 'wheel'
